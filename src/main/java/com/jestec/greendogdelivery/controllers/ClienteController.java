@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class ClienteController {
 @Autowired
 private ClienteRepository clienteRepository;
- 
+  
 @GetMapping("")
 public ModelAndView list() {
     ModelAndView modelAndView=new ModelAndView("clientes/list");

@@ -33,8 +33,8 @@
     <p>Preço: <span th:text="${item.preco}"></span></p> 
     <a type="submit" class="btn btn-edit" th:href="@{'/itens/editar/'+${item.id}}">Editar</a>
     <button type="submit" class="btn" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</button>
-    <a type="submit" class="btn btn-edit" th:href="@{/clientes}">Ver lista</a>
+    <a type="submit" class="btn btn-edit" th:href="@{/itens}">Ver lista</a>
   
-
+ 
 </body>
 </html>
