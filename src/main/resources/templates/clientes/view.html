@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Produto</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" th:href="@{/}">Green Dog</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Lista de Clientes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">H2-Console</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+    <h1>Detalhes do Cliente</h1>
+    <p>ID: <span th:text="${cliente.id}"></span></p>
+    <p>Nome: <span th:text="${cliente.nome}"></span></p>
+    <p>Descrição: <span th:text="${cliente.endereco}"></span></p> 
+    <a type="submit" class="btn btn-edit" th:href="@{'/clientes/editar/'+${cliente.id}}">Editar</a>
+    <button type="submit" class="btn" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</button>
+    <a type="submit" class="btn btn-edit" th:href="@{/clientes}">Ver lista</a>
+  
+
+</body>
+</html>
